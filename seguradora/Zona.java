@@ -30,12 +30,5 @@ public enum Zona {
 		this.codigo = codigo;
 	}
 	
-	
-
-	
-
-
-	
-	
 
 }

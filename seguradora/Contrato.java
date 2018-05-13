@@ -1,5 +1,7 @@
 package seguradora;
 
+import java.util.Scanner;
+
 public class Contrato {
 	
 	private Cliente cliente;
@@ -23,7 +25,13 @@ public class Contrato {
 	}
 	
 	
-	
+	public void cadastrarContrato() {
+		Scanner leitor = new Scanner(System.in);
+		int tipo = 0;
+		
+		System.out.printf("(1)Pessoa Física\n(2)Pessoa Jurídica");
+
+	}
 	
 	
 }

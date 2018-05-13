@@ -1,33 +1,25 @@
 package seguradora;
 
-/**
- * 
- * @author nathalie.kato
- *
- */
 public enum TipoPessoa {
 	
-	FISICA("Pessoa Física"),
-	JURIDICA("Pessoa Jurídica");
+	FISICA(1),
+	JURIDICA(2);
 
 	
-	private String tipo;
+	private int codigo;
 	
-	public String getTipo() {
-		return tipo;
+
+	public int getCodigo() {
+		return codigo;
 	}
 
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
-	}	
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
+	}
 	
-	private TipoPessoa(String tipo) {
-		this.tipo = tipo;
+	private TipoPessoa(int codigo) {
+		this.codigo = codigo;
+
 	}
 
-
-	
-	
-	
-	
 }
