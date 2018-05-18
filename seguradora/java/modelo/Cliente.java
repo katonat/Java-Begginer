@@ -1,6 +1,5 @@
 package modelo;
 
-import java.util.Scanner;
 
 import tiposenums.TipoPessoa;
 
@@ -10,12 +9,15 @@ public class Cliente {
 	private String nome;
 	private TipoPessoa tipoPessoa;
 	
-	public Cliente() {
-		this.codigo = 0;
-		this.nome = "";
+	
+	
+	
+	
+	@Override
+	public String toString() {
+		return "Cliente [codigo=" + codigo + ", nome=" + nome + ", tipoPessoa="
+				+ tipoPessoa + "]";
 	}
-	
-	
 	public int getCodigo() {
 		return codigo;
 	}

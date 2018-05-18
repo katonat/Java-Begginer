@@ -9,10 +9,23 @@ public class ContratoResidencial extends Contrato{
 	private Zona zona;
 	private TipoResidencia tipoResidencia;
 	
-	public ContratoResidencial() {
-		
+	
+	
+	@Override
+	public String toString() {
+		return "ContratoResidencial [endereco=" + endereco + ", zona=" + zona
+				+ ", tipoResidencia=" + tipoResidencia + "]";
 	}
+
+
+	public float obterValorSeguro() {
+		float valorSeguro = 0f;
+		valorSeguro = 0.2f * getValorImovel();
 		
+
+		return valorSeguro;
+	}
+	
 	
 	public String getEndereco() {
 		return endereco;
@@ -32,16 +45,5 @@ public class ContratoResidencial extends Contrato{
 	public void setTipoResidencia(TipoResidencia tipoResidencia) {
 		this.tipoResidencia = tipoResidencia;
 	}
-	
-	
-	public float obterValorSeguro() {
-		float valorSeguro = 0f;
-		valorSeguro = 0.2f * getValorImovel();
-		
-
-		
-		return valorSeguro;
-	}
-	
 	
 }
