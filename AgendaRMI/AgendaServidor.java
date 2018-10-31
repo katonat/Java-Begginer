@@ -1,3 +1,5 @@
+package br.unipe.agendarmi;
+
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.TreeMap;
@@ -19,19 +21,14 @@ public class AgendaServidor extends UnicastRemoteObject implements AgendaInterfa
 	
 	public String buscarNome(String nome) throws RemoteException {
 		if(this.agenda.containsKey(nome))
-			return 
+			return nome + "/n" +  this.agenda.get(nome);
+		
+		return "Nome não encontrado";
 	}
 	
-	public String buscarNumero() throws RemoteException {
-		
-	}
-	
-	public void listarContatos() throws RemoteException {
-		
-	}
 
-	
-	
-	
+	public void listarContatos() throws RemoteException {
+		System.out.println(this.agenda.toString());
+	}
 
 }
