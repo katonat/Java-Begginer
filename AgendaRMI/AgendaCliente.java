@@ -2,7 +2,6 @@ package br.unipe.agendarmi;
 
 import java.net.MalformedURLException;
 import java.rmi.Naming;
-import java.rmi.NotBoundException;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
@@ -15,7 +14,11 @@ public class AgendaCliente {
 			AgendaInterface objRemoto = (AgendaInterface) obj;
 			objRemoto.gravarContato("Nathalie", "123456");
 			objRemoto.listarContatos();
-		} catch (MalformedURLException | RemoteException | NotBoundException e) {
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		} catch (RemoteException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	
